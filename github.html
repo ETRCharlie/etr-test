@@ -3,7 +3,7 @@
 <title>GitStuff 1</title>
 </head>
 
-<body style="font-size: 15px; font-family: arial; background: tan;">
+<body style="font-size: 15px; font-family: arial; background: pink;">
 
 <div style="margin: 0 auto; max-width: 800px;">
 
@@ -24,14 +24,14 @@
   <div style="float: left; width: 47%; padding-right: 5px; border-right: 1px solid #000;">
     <p><strong>GitStuff Commands</strong></p>
     <p>git clone GitRepoURL<br /><em>downloads a copy of the master</em></p>
-    <p>git checkout -b YourNewBranchName <br /><em>branches the repo</em></p>
+    <p>git checkout -b YourNewBranchName <br /><em>creates a new (-b) branch of the repo</em></p>
 
     <p>git add file.name <br /><em>stages that file for committing</em></p>
     <p>git add * <br /><em>stages <u>all</u> the files for committing</em></p>
 
     <p>git commit -m "message with description of changes" <br /><em>commits that file to the repo</em></p>
     <p>git commit -a -m "adds and commits all files" <br /><em>adds ALL files and commits them<br />(combines previous two commands)</em></p>
-    <p>git push<br /><em>moves the committed files up to GitHub</em></p>
+    <p>git push --set-upstream origin YourNewBranchName<br /><em>moves your branch up to GitHub</em></p>
     <p>git merge YourBranchName<br /><em>merges your branch with the master (?)</em></p>
 
   </div>
@@ -42,7 +42,7 @@
     <p>git branch <br /><em>tells you which branch you're working on</em></p>
 
     <p>git log <br /><em>shows you the history (q to quit)</em></p>
-    <p>git checkout SomeBranch<br /><em>switches you to that branch</em></p>
+    <p>git checkout SomeBranchName<br /><em>switches you to that branch</em></p>
   </div>
 
 </div>
