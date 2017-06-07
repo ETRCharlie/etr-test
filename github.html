@@ -3,40 +3,47 @@
 <title>GitStuff 1</title>
 </head>
 
-<body style="font-size: 15px; font-family: arial; background: tan;">
+<body style="font-size: 15px; font-family: arial; background: pink;">
 
 <div style="margin: 0 auto; max-width: 800px;">
 
   <h1>GitStuff</h1>
 
-  <p>A respository (repo) is a project. A branch is a small offshoot of the main repo that will likely be deleted after it is committed back to the repository. A fork is a separate copy of that repo which will likely live on its own.</p>
+  <p>A respository ("repo") is a project. A branch is a small offshoot of the main ("master") repo that will likely be deleted after it is committed back to the repo. A fork is a separate copy of that repo which will likely live on its own.</p>
 
-  <p>The basic usage is: Create (or get access to) a repo at GitHub, copy it to your local machine ("clone"), make your changes locally, let GitHub know you have changes ready to move into production ("commit"), push them into production ("pull").</p>
+  <p>The basic idea is: Create (or get access to) a repo at GitHub, copy it to your local machine ("clone"), branch that repo, make your changes locally to the new branch, add that branch to the system ("add"), let GitHub know you have changes ready to move into production ("commit"), push the branch into production ("push"), merge your branch into the master ("merge").</p>
 
-  <p style="padding-bottom: 20px; border-bottom: 1px solid #000;">First, <a href="https://desktop.github.com/" target="_blank">download and install Github Desktop app</a>, then <a href="https://git-scm.com/downloads" target="_blank">download and install command-line app</a>. Install both as your own user, now as admin.</p>
+  <p>First, <a href="https://desktop.github.com/" target="_blank">download and install Github Desktop app</a>, and/or <a href="https://git-scm.com/downloads" target="_blank">download and install the command-line app</a>. Install both as your own user, not as admin.</p>
+
+  <p>Create a location in your local system where you want to have all your Git-related fun. If you're using the command-line app, change to that location within that command-line app.</p>
+
+  <p>In GitHub.com, go to your repo page, click the "clone or download" button and copy a repo to your local system (there is a command-line option for "git clone RepoURL, but just downloading the files from here is easier). OR, if your files are already local, use GitHub.com to create a new repo and upload those files to the new repo.</p>
+
+  <p style="padding-bottom: 20px; border-bottom: 1px solid #000;">Make a branch of the repo, work on that branch. You can switch between the branch and the master to view differences/changes in both the command-line app (git checkout YourBranchName) or the desktop app.</p>
 
   <div style="float: left; width: 47%; padding-right: 5px; border-right: 1px solid #000;">
     <p><strong>GitStuff Commands</strong></p>
-    <p>git add * <br /><em>adds all the local files to the git repo</em></p>
-    <p>git status <br /><em>shows you the state of the git repo</em></p>
+    <p>git clone GitRepoURL<br /><em>downloads a copy of the master</em></p>
+    <p>git checkout -b YourNewBranchName <br /><em>creates a new (-b) branch of the repo</em></p>
 
     <p>git add file.name <br /><em>stages that file for committing</em></p>
+    <p>git add * <br /><em>stages <u>all</u> the files for committing</em></p>
+
     <p>git commit -m "message with description of changes" <br /><em>commits that file to the repo</em></p>
-    <p>git commit -a -m "adds and commits all files" <br /><em>adds ALL files and commits them (combines previous two commands)</em></p>
-    <p>git push<br /><em>moves the committed files up to GitHub</em></p>
-    <p>git merge BranchName<br /><em>merges your branch with the master (?)</em></p>
+    <p>git commit -a -m "adds and commits all files" <br /><em>adds ALL files and commits them<br />(combines previous two commands)</em></p>
+    <p>git push --set-upstream origin YourNewBranchName<br /><em>moves your branch up to GitHub</em></p>
+    <p>git merge YourBranchName<br /><em>merges your branch with the master (?)</em></p>
 
   </div>
 
   <div style="float: right; width: 47%; padding-left: 5px;">
     <p><strong>Other GitStuff</strong></p>
-    <p>git log <br /><em>shows you the history (q to quit)</em></p>
-    <p>git checkout -b NewBranchName <br /><em>branches the repo</em></p>
+    <p>git status <br /><em>shows you the state of the git branch</em></p>
     <p>git branch <br /><em>tells you which branch you're working on</em></p>
-    <p>git checkout master<br /><em>returns you to the master repo</em></p>
-  </div>
 
-  <div style="clear: both;"></div>
+    <p>git log <br /><em>shows you the history (q to quit)</em></p>
+    <p>git checkout SomeBranchName<br /><em>switches you to that branch</em></p>
+  </div>
 
 </div>
 
